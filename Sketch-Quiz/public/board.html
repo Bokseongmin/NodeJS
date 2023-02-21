@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/chat.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 d-flex justify-content-center align-items-center mb-3 mt-5">
+                <canvas id="cv"></canvas>
+            </div>
+            <div class="col-md-3 d-flex justify-content-start flex-column mb-5 mt-5" id="colorBtn">
+                <button class="btn btn-danger mb-2" id="redBtn" data-color="red">RED</button>
+                <button class="btn btn-warning mb-2" id="orangeBtn" data-color="orange">ORANGE</button>
+                <button class="btn btn-primary mb-2" id="blueBtn" data-color="blue">BLUE</button>
+                <button class="btn btn-dark mb-2" id="blackBtn" data-color="black">BLACK</button>
+                <button class="btn btn-light mb-2" id="whiteBtn" data-color="white">WHITE</button>
+                <div class="mt-auto">
+                    <button class="btn btn-warning mb-2" id="clearBtn">전체 지우기</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center mb-3">
+                <input type="text" class="input-group-text" id="userId" placeholder="ID">
+                <button type="button" class="btn btn-primary mx-2" id="connectBtn">연결하기</button>
+                <button class="btn btn-danger mx-2" id="closeBtn">접속 해제</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center mb-3">
+                <div class="" id="messageView">--- 메세지 보이는 영역 ---</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 d-flex justify-content-center mb-3">
+                <input type="text" class="input-group-text" id="userMessage" placeholder="Send Message" />
+                <button class="btn btn-primary mx-2" id="sendBtn">전송</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
